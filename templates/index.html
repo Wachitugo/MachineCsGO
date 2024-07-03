@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+  <title>Modelo Predictivo para Ganar la Ronda</title>
+</head>
+<body>
+  <div class="container">
+    <h3 class="mt-4">Modelo Predictivo para Ganar la Ronda</h3>
+
+    <div class="mt-4">
+      <form action="/result" method="POST">
+        <div class="form-group">
+          <label for="dinero_equipo">Dinero del Equipo: </label>
+          <input type="text" class="form-control" id="dinero_equipo" name="dinero_equipo">
+        </div>
+        <div class="form-group">
+          <label for="granadas">Cantidad de Granadas: </label>
+          <input type="text" class="form-control" id="granadas" name="granadas">
+        </div>
+        <div class="form-group">
+          <label for="kills">Cantidad de Kills: </label>
+          <input type="text" class="form-control" id="kills" name="kills">
+        </div>
+        <button type="submit" class="btn btn-primary">Enviar</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
