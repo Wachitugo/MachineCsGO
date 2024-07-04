@@ -2,7 +2,7 @@ from flask import Flask, request, render_template
 import pickle
 import numpy as np
 
-app = Flask(__name__, template_folder='templates')
+app = Flask(__name__, template_folder='templates', static_url_path='/static')
 
 # Cargar el modelo y el scaler desde archivos pickle
 model_path = 'checkpoints/logistic_model.pkl'
@@ -32,15 +32,22 @@ def result():
         
         # Crear el array de entrada
         input_data = np.array([[dinero_equipo, granadas, kills]])
+
+        print(input_data)
         
         # Escalar los datos de entrada
         input_data_scaled = scaler.transform(input_data)
         
         # Hacer la predicción
         prediction = logistic_model.predict(input_data_scaled)
+        print(prediction)
         
         # Convertir la predicción a una respuesta legible
-        result = 'Ganar' if prediction[0] == 1 else 'Perder'
+        result = ''
+        if prediction[0] == 0:
+            result = 'ganar' 
+        else:
+            result = 'perder'
         
         return render_template('result.html', result=result)
     
