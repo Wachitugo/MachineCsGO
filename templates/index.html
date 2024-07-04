@@ -16,28 +16,34 @@
   <nav class="navbar navbar-dark">
     <img src="/static/download.png" alt="Logo" class="imagen">
   </nav>
-  <div class="container">
-    <h3 class="mt-4">Modelo Predictivo para Ganar la Ronda</h3>
+  <div class="container mt-4 mb-4">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-body">
+            <h3 class="card-title text-center">Modelo Predictivo para Ganar la Ronda</h3>
 
-    <div class="mt-4">
-      <form action="/result" method="POST">
-        <div class="form-group">
-          <label for="dinero_equipo">Dinero del Equipo: </label>
-          <input type="text" class="form-control" id="dinero_equipo" name="dinero_equipo">
+            <form action="/result" method="POST">
+              <div class="form-group">
+                <label for="dinero_equipo">Dinero del Equipo: </label>
+                <input type="text" class="form-control" id="dinero_equipo" name="dinero_equipo" required>
+              </div>
+              <div class="form-group">
+                <label for="granadas">Cantidad de Granadas: </label>
+                <input type="text" class="form-control" id="granadas" name="granadas" required>
+              </div>
+              <div class="form-group">
+                <label for="kills">Cantidad de Kills: </label>
+                <input type="text" class="form-control" id="kills" name="kills" required>
+              </div>
+              <button type="submit" class="btn btn-dark btn-block">Enviar</button>
+            </form>
+
+          </div>
         </div>
-        <div class="form-group">
-          <label for="granadas">Cantidad de Granadas: </label>
-          <input type="text" class="form-control" id="granadas" name="granadas">
-        </div>
-        <div class="form-group">
-          <label for="kills">Cantidad de Kills: </label>
-          <input type="text" class="form-control" id="kills" name="kills">
-        </div>
-        <button type="submit" class="btn btn-primary">Enviar</button>
-      </form>
+      </div>
     </div>
   </div>
-
   <footer class="footer">
     <div class="container">
         <span>© Grupo Número 2 - Marcos Bombalas - Cristian Mansilla - Benjamín Ruiz ©</span>

@@ -28,7 +28,6 @@ MachineCsGO
 ### Crear Entorno Virtual
 1. Navega al directorio del proyecto en la terminal.
 2. Crea un entorno virtual ejecutando:
-3. Copiar código
 ```python
 python -m venv env
 ```
