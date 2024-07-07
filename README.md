@@ -43,7 +43,7 @@ En Windows:
 En macOS y Linux:
 
 ```bash
-env/bin/activate
+source env/bin/activate
 ```
 Instala las dependencias del proyecto utilizando el archivo requirements.txt:
 ```bash
